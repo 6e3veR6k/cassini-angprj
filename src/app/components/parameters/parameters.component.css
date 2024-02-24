@@ -1,0 +1,32 @@
+.params-wrapper {
+  padding: 0.714287rem;
+}
+
+.params {
+  padding: 1.42857142rem;
+  border-radius: 0.57142857rem;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12),
+              0 1px 2px rgba(0,0,0,0.24);
+}
+
+.form {
+  display: flex;
+  align-items: end;
+}
+
+.input-date {
+  width: 12rem;
+}
+
+.input-form:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.input-form label {
+  display: block;
+  font-size: 0.9rem;
+  color: #818181;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+}

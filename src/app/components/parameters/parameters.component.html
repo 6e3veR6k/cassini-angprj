@@ -1,0 +1,44 @@
+<div class="params-wrapper">
+
+  <div class="params">
+    <form class="form" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+      <div class="input-form input-dropdown">
+        <label for="status">Статус актів</label>
+        <p-dropdown class="p-element p-inputwrapper ng-valid ng-touched p-inputwrapper-filled ng-dirty"
+          formControlName="selectedStatus" inputId="status" [options]="agentActStatuses" optionLabel="name"
+          optionValue="guid" placeholder="Виберіть статус">
+        </p-dropdown>
+      </div>
+
+      <div class="input-form input-date">
+        <label for="period">Період актів</label>
+        <p-calendar formControlName="selectedPeriod" inputId="period" [iconDisplay]="'input'" [showIcon]="true"
+          view="month" dateFormat="mm.yy" [readonlyInput]="true" placeholder="Виберіть період">
+        </p-calendar>
+      </div>
+
+      <div class="input-form input-date">
+        <label for="selectedApprovedDate">Дата затвердження</label>
+        <p-calendar formControlName="selectedApprovedDate" inputId="selectedApprovedDate" [iconDisplay]="'input'"
+          [showIcon]="true" inputId="selectedApprovedDate" dateFormat="dd.mm.yy" placeholder="Виберіть дату">
+        </p-calendar>
+      </div>
+
+      <div class="input-form">
+        <label for="selectedChanels">Канали агентів</label>
+        <p-multiSelect formControlName="selectedChanels" inputId="selectedChanels" [options]="agentChanels"
+          placeholder="Select Chanels" optionLabel="code" optionValue="guid" display="chip" [showClear]="true" placeholder="Виберіть канали">
+        </p-multiSelect>
+      </div>
+
+      <div class="input-form">
+        <label for="selectedDirections">Дирекції агентів</label>
+        <p-multiSelect formControlName="selectedDirections" inputId="selectedDirections" [options]="agentsDirections"
+          placeholder="Select Directions" optionLabel="code" optionValue="guid" display="chip" [showClear]="true" placeholder="Виберіть дирекції">
+        </p-multiSelect>
+      </div>
+
+      <p-button label="Перегляд" [type]="'submit'" [disabled]="!formGroup.valid"></p-button>
+    </form>
+  </div>
+</div>
