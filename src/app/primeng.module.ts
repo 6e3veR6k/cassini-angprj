@@ -4,7 +4,9 @@ import { CalendarModule } from 'primeng/calendar';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { DropdownModule } from 'primeng/dropdown';
 import { ButtonModule } from 'primeng/button';
-
+import { DataViewModule } from 'primeng/dataview';
+import { TagModule } from 'primeng/tag';
+import { CheckboxModule } from 'primeng/checkbox';
 
 @NgModule({
   imports: [
@@ -12,14 +14,20 @@ import { ButtonModule } from 'primeng/button';
     RadioButtonModule,
     DropdownModule,
     CalendarModule,
-    ButtonModule
+    ButtonModule,
+    DataViewModule,
+    TagModule,
+    CheckboxModule
   ],
   exports: [
     MultiSelectModule,
     RadioButtonModule,
     DropdownModule,
     CalendarModule,
-    ButtonModule
+    ButtonModule,
+    DataViewModule,
+    TagModule,
+    CheckboxModule
   ],
 })
 export class PrimengModule {}

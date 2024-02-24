@@ -1,1 +1,23 @@
-<p>act-list works!</p>
+<div class="acts-data" *ngIf="selectedChanels.length > 0">
+  <div class="selected-chanels">
+    <p class="text">Канали: <span class="badge" *ngFor="let chanels of selectedChanels">{{ chanels }}</span></p>
+  </div>
+  <div class="selected-branches">
+    <p class="text">Дирекції: <span class="badge" *ngFor="let directions of selectedDirection">{{ directions }}</span></p>
+  </div>
+  <p-checkbox [binary]="true" class="select-all-checkbox" (onChange)="changeSelection()"></p-checkbox>
+</div>
+<ul class="data-list">
+  <li class="data-list-item" *ngFor="let act of agentsActs">
+    <div class="data-row" [class.selected]="act.Selected" (click)="selectRow(act)">
+      <div class="act-dir">{{ act.DirectionCode }}</div>
+      <div class="act-id">{{ act.ActId }}</div>
+      <div class="act-comm">{{ act.CommissionValue }}</div>
+      <div class="act-real">{{ act.RealPaymentValue }}</div>
+      <div class="agent-inn">{{ act.IdentificationCodeEDRPOU }}</div>
+      <div class="agent-dog">{{ act.DocumentType }}</div>
+      <div class="agent-name">{{ act.AgentName }}</div>
+      <p-checkbox [binary]="true" class="agent-checkbox" [(ngModel)]="act.Selected"></p-checkbox>
+    </div>
+  </li>
+</ul>

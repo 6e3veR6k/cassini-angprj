@@ -1,0 +1,144 @@
+:host {
+  display: block;
+  width: 70%;
+  margin-right: 0.714287rem;
+}
+
+.acts-data {
+  display: flex;
+  padding: 8.5px 8.5px;
+  color: #49566d;
+  font-size: .8rem;
+}
+
+.text {
+  margin: 0;
+}
+
+.selected-chanels {
+  margin-right: 30px;
+}
+
+.badge {
+  padding: 1px 8px;
+  background-color: #7ed0ff;
+  border-radius: 10px;
+  align-items: center;
+  font-size: 13px;
+}
+
+.badge:not(:last-child) {
+  margin-right: 10px;
+}
+
+.select-all-checkbox {
+  margin-left: auto;
+}
+
+.data-list {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.data-list-item .data-row {
+  outline: 2px solid transparent;
+  transition: background-color 0.3s ease-in, outline 0.3s ease-in;
+}
+
+.data-list-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.data-list-item:hover .data-row {
+  background-color: #00aeff01;
+  cursor: pointer;
+  outline: 2px solid #00aeff67;
+}
+
+.data-row {
+  display: flex;
+  padding: 8.5px 8.5px 8.5px 41px;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #f3f3f3;
+  position: relative;
+  overflow: hidden;
+}
+
+.act-dir {
+  display: flex;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  border: 1px solid #f3f3f3;
+  height: 41px;
+  width: 41px;
+  align-items: center;
+  justify-content: center;
+  background-color: #EFEFEF;
+  color: #92929D;
+}
+
+.data-row.selected {
+  background-color: rgba(202, 229, 255, 0.205);
+}
+
+.data-row.selected .act-dir {
+  background-color: #00A3FF;
+  color: #fff;
+}
+
+.data-row.selected .act-id,
+.data-row.selected .agent-inn,
+.data-row.selected .agent-dog {
+  color: #00A3FF;
+}
+
+
+.act-id {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-right: 10px;
+  color: #92929D;
+}
+
+.act-comm {
+  width: 10%;
+  text-align: center;
+  padding: 2px;
+  background-color: #00A3FF;
+  color: #fff;
+  border-radius: 10px;
+  margin-right: 30px;
+}
+
+.act-real {
+  width: 10%;
+  text-align: center;
+  padding: 2px;
+  background-color: #00a2ff1f;
+  color: #004e66;
+  border-radius: 10px;
+  margin-right: 30px;
+}
+
+.agent-inn {
+  width: 10%;
+  text-align: center;
+  color: #ABABAB;
+  margin-right: 30px;
+}
+
+.agent-dog {
+  width: 20%;
+  text-align: left;
+  color: #929292;
+  margin-right: 20px;
+}
+
+.agent-checkbox {
+  margin-left: auto;
+}

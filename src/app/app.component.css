@@ -9,3 +9,8 @@
   flex-direction: column;
   margin-left: 5.25rem;
 }
+
+.view-wrapper {
+  display: flex;
+  padding: 0.714287rem;
+}

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AgentActStatus } from '../models/agent-act-status.model';
-import { Observable, of } from 'rxjs';
+import { Observable, Subject, of } from 'rxjs';
 import { ACTS_STATUSES, AGENT_CHANELS, BRANCHES } from '../models/mockup-data';
 import { AgentChanels } from '../models/agent-chanels.model';
 import { Branch } from '../models/branch.model';
@@ -9,6 +9,10 @@ import { Branch } from '../models/branch.model';
   providedIn: 'root'
 })
 export class ParametersService {
+  selectedStatuses: Subject<AgentActStatus> = new Subject<AgentActStatus>();
+  selectedAgentChanels: Subject<AgentChanels[]> = new Subject<AgentChanels[]>();
+  selectedDirections: Subject<Branch[]> = new Subject<Branch[]>();
+
   constructor() { }
 
   getActsStatuses(): Observable<AgentActStatus[]> {
