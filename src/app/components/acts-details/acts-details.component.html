@@ -1,1 +1,14 @@
-<p>acts-details works!</p>
+<div class="details" *ngIf="acts">
+  <ul class="list">
+    <li class="list-item" *ngFor="let act of acts; trackBy: trackByDirection">
+      <div>
+        <p class="text">
+          <span class="dir">{{act.dirCode}}</span>
+          <span class="com">{{act.realpayment | number: '0.2'}}</span>
+          <span class="com">{{act.commission | number: '0.2'}}</span>
+        </p>
+      </div>
+    </li>
+  </ul>
+  <p-button label="Вивантажити" [type]="'submit'" (onClick)="loadFile()"></p-button>
+</div>

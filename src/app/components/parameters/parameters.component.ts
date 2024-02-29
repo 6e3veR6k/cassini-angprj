@@ -24,7 +24,7 @@ export class ParametersComponent {
   constructor(
     private parametersService: ParametersService,
     private agentsActsService: AgentsActsService
-  ) {}
+  ) { }
 
 
   ngOnInit() {

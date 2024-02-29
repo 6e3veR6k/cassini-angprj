@@ -2,3 +2,57 @@
   display: block;
   width: calc(20% - 0.714287rem);
 }
+
+.details {
+  padding: 1.42857142rem;
+  border-radius: 0.57142857rem;
+  text-align: right;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12),
+              0 1px 2px rgba(0,0,0,0.24);
+}
+
+.list {
+  list-style: none;
+  margin: 0 0 1.42857142rem 0;
+  padding: 0;
+}
+
+.list-item:not(:last-child) {
+  margin-bottom: 0.714287rem;
+}
+
+.text {
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+  padding: 8.5px 8.5px 8.5px 41px;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #f3f3f3;
+  position: relative;
+  overflow: hidden;
+}
+
+.dir {
+  display: flex;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  border: 1px solid #f3f3f3;
+  height: calc(100% + 2px);
+  width: 41px;
+  align-items: center;
+  justify-content: center;
+  background-color: #00A3FF;
+  color: #fff;
+}
+
+.com {
+  width: 30%;
+  text-align: center;
+  padding: 2px;
+  color: #00A3FF;
+  margin-right: 30px;
+}

@@ -2,7 +2,7 @@
 <div class="container">
   <app-parameters></app-parameters>
   <div class="view-wrapper">
-    <app-act-list></app-act-list>
-    <app-acts-details></app-acts-details>
+    <app-act-list (actsChanged)="actsChangedHandler($event)"></app-act-list>
+    <app-acts-details [acts]="selectedActs"></app-acts-details>
   </div>
 </div>

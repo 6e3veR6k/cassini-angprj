@@ -9,7 +9,7 @@
 </div>
 <ul class="data-list">
   <li class="data-list-item" *ngFor="let act of agentsActs">
-    <div class="data-row" [class.selected]="act.Selected" (click)="selectRow(act)">
+    <div class="data-row" [class.selected]="act.Selected">
       <div class="act-dir">{{ act.DirectionCode }}</div>
       <div class="act-id">{{ act.ActId }}</div>
       <div class="act-comm">{{ act.CommissionValue }}</div>
@@ -17,7 +17,7 @@
       <div class="agent-inn">{{ act.IdentificationCodeEDRPOU }}</div>
       <div class="agent-dog">{{ act.DocumentType }}</div>
       <div class="agent-name">{{ act.AgentName }}</div>
-      <p-checkbox [binary]="true" class="agent-checkbox" [(ngModel)]="act.Selected"></p-checkbox>
+      <p-checkbox [binary]="true" class="agent-checkbox" [(ngModel)]="act.Selected" (onChange)="changeSelectedActs()"></p-checkbox>
     </div>
   </li>
 </ul>
